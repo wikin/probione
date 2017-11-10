@@ -1,0 +1,86 @@
+.btn{
+	font-size:14px;
+	padding-left:25px;
+	padding-right:25px;
+
+	&.btn-lg{
+		font-size:16px;
+	}
+}
+
+
+
+.close {
+	font-size:40px;
+	opacity:1;
+	&:hover{opacity:1}
+}
+
+
+
+
+
+h1, .h1 {
+	letter-spacing:-1px;
+	line-height:1.2;
+	font-weight:600;
+	margin-top:0;
+
+	@media (min-width: @grid-float-breakpoint) {
+	  margin-bottom: @line-height-computed;
+		font-size:30px;
+	}
+
+}
+
+h2, .h2 {
+	letter-spacing:-1px;
+
+	@media (min-width: @grid-float-breakpoint) {
+	  margin-bottom: @line-height-computed*1;
+		font-size:40px;
+	}
+}
+
+
+
+h3, .h3,
+h4, .h4 {
+  margin-top: @line-height-computed*2;
+	line-height: @line-height-computed;
+}
+
+h2+h3{
+	margin-top:0;
+}
+
+h4, .h4 {
+	font-weight:300;
+	font-family:@font-family-sans-serif;
+}
+
+
+
+blockquote{
+	border:0;
+	.h2();
+	.make-md-column(10, 0px);
+	.make-md-column-push(1);
+	font-style:oblique;
+}
+
+.form-control{
+	.box-shadow(none);
+	.placeholder(@input-color);
+}
+
+.form-group{
+	margin-bottom:25px;
+}
+
+section{
+	padding-top:30px;
+	@media (min-width: @screen-md){
+		padding-top:59px;
+	}
+}

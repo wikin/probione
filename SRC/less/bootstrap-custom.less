@@ -1,0 +1,104 @@
+@brand-primary:#007593;
+@border-color:#686968;
+
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
+
+@btn-border-radius-base:         4px;
+@btn-border-radius-large:        4px;
+@btn-border-radius-small:        4px;
+
+@btn-default-color:              @brand-primary;
+@btn-default-border:             @brand-primary;
+@btn-default-bg:                 #fff;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             @brand-primary;
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             @brand-success;
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                @brand-info;
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             @brand-warning;
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              @brand-danger;
+
+
+@state-warning-text:             darken(@brand-warning, 10%);
+@state-warning-bg:               lighten(@brand-warning, 32%);
+@state-warning-border:           @state-warning-bg;
+
+@state-danger-text:              darken(@brand-danger, 10%);
+@state-danger-bg:                lighten(@brand-danger, 32%);
+@state-danger-border:            @state-danger-bg;
+
+
+
+@text-color:										 #000000;
+
+@font-family-sans-serif:  "Roboto",sans-serif;
+@font-size-base:					14px;
+
+@font-size-h1:            24px;
+@font-size-h2:            20px;
+@font-size-h3:            16px;
+
+
+@headings-font-family:    "Roboto Slab",sans-serif;
+@headings-font-weight:    800;
+
+@input-border:						@border-color;
+@input-border-focus:      @brand-primary;
+
+@icon-font-path:          "../bower_modules/bootstrap/fonts/";
+
+@padding-base-vertical:     8px;
+@padding-base-horizontal:   20px;
+@padding-large-vertical:    18px;
+@padding-large-horizontal:  32px;
+
+@navbar-default-color:             @text-color;
+@navbar-default-link-color:        @text-color;
+@navbar-default-link-hover-color:  @brand-primary;
+@navbar-default-link-active-color: @text-color;
+@navbar-height:                    120px;
+@navbar-default-bg:                transparent;
+@navbar-default-border:            transparent;
+
+@close-color: @brand-primary;
+@close-font-weight: 300;
+
+@modal-header-border-color:white;
+@modal-inner-padding: 50px;
+
+@panel-body-padding:          25px;
+@panel-heading-padding:       10px 25px;
+@panel-footer-padding:        @panel-heading-padding;
+@panel-border-radius:         10px;
+
+@table-border-color:          @border-color;
+
+@hr-border:										@border-color;
+
+@dropdown-border:							@border-color;
+@dropdown-fallback-border:		@border-color;
+.dropdown-menu{margin-top:-1px}
+
+.form-control-focus(@color: @input-border-focus) {
+  &:focus {
+    border-color: @color;
+    outline: 1px solid @brand-primary;
+    .box-shadow(none);
+  }
+}
+

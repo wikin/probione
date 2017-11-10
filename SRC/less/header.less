@@ -1,0 +1,64 @@
+.logo{
+	letter-spacing:-1px;
+	font-family:@headings-font-family;
+	font-weight:300;
+	font-size:16px;
+	strong{font-size:24px;font-weight:600}
+
+	.claim{
+		display:block;
+		margin-top:5px
+	}
+
+}
+
+header{
+	border-bottom:8px solid @brand-primary;
+}
+
+.textwidget{
+	position:relative;z-index:0;line-height:1.4;
+	margin-top:10px;
+
+	a{
+		display:block;background:#ede9e0;border-radius:4px;padding:20px;
+	 .text{color:black}
+   .btn{display:block;margin:10px 0 0 0;font-size:1em}
+		
+		&:hover{text-decoration:none}
+	}
+
+	@media (min-width: @grid-float-breakpoint){
+		margin:10px -15px -15px 0;
+		max-width:290px;
+		float:right;
+	}
+
+	@media (min-width: @screen-md){
+		margin-top:30px;
+		max-width:460px;
+		
+		a{
+			display:flex;
+
+			.btn{
+				margin:0 0 0 10px;
+				align-self:center;
+			}
+		}
+
+		&:after{
+			content:'';
+			position:absolute;
+			z-index:-1;
+			background:#eeddba;
+			top:10%;
+			left:10px;
+			right:-1px;
+			bottom:-2px;
+			transform: skew(3deg, 1deg);
+		}
+	}
+
+}
+

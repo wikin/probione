@@ -1,0 +1,11 @@
+{
+  "name": "probione",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "jquery": "^1.12.0",
+		"less":"^2.5.1",
+		"font-awesome":"^4.6.3"
+  }
+}
