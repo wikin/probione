@@ -28,5 +28,43 @@ section.lekari{
     }
   }
 
+  .flex-viewport{
+    .col-sm-4{
+      margin:0;
+      padding:0;
+    }
+  }
+
+  .flex-direction-nav{
+    list-style: none;
+
+
+    .flex-prev,
+    .flex-next {
+      position: absolute;
+      background: url('../img/angle.svg') no-repeat;
+      height:137px;
+      width:57px;
+      top:36px;
+
+      &.flex-disabled{
+        opacity: 0;
+      }
+    }
+
+    .flex-prev{
+      left:15px;
+    }
+
+    .flex-next{
+      right: 15px;
+      transform: scaleX(-1);   
+    }
+  }
+  
+  .row{
+    position: relative;
+  }
+
 
 }
