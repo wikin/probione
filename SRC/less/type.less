@@ -1,10 +1,18 @@
 .btn{
-	font-size:14px;
 	padding-left:25px;
 	padding-right:25px;
+	border-radius:20px;
 
 	&.btn-lg{
-		font-size:16px;
+		border-radius:30px;
+		padding-left:45px;
+		padding-right:45px;
+	}
+
+	.fa:first-child {
+		font-size:1.6em;
+		margin: -0.2em .3em -0.2em -10px;
+    vertical-align: -0.1em;
 	}
 }
 
@@ -21,24 +29,22 @@
 
 
 h1, .h1 {
-	letter-spacing:-1px;
 	line-height:1.2;
-	font-weight:600;
 	margin-top:0;
 
 	@media (min-width: @grid-float-breakpoint) {
 	  margin-bottom: @line-height-computed;
-		font-size:30px;
+		font-size:50px;
 	}
 
 }
 
 h2, .h2 {
-	letter-spacing:-1px;
+	line-height:1.2;
 
 	@media (min-width: @grid-float-breakpoint) {
 	  margin-bottom: @line-height-computed*1;
-		font-size:40px;
+		font-size:30px;
 	}
 }
 

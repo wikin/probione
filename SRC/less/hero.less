@@ -1,21 +1,60 @@
 section.hero{
+  padding-top:0;
+
   display:flex;
   flex-direction: column;
   
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: @screen-sm-min) {
     flex-direction: row;
   }    
 
   .image,
   .icon{
     flex:1;
-    height:450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
   }
+  .image{
+    background: url("../img/hero-image.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    text-align:center;
+    padding: 40px 20px;
+    justify-content: center;
+    
+    h1{
+      color:white;
+      max-width: 10em;
 
+      @media (min-width: @screen-lg-min) {
+        margin-top: 40px;
+        margin-bottom: 30px;
+      }      
+    }
+
+
+    .btn{
+      flex: 0;
+    }
+
+  }
   .icon{
     background: url("../img/hero-bg.jpg") no-repeat 50% 50%;
     background-size: cover;
     position:relative;
+
+    min-height:200px;
+    justify-content: flex-end;
+    
+
+    @media (min-width: @screen-sm-min) {
+      min-height: 300px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      min-height: 450px;
+    }    
+    
 
     &:before{
       content:'';
@@ -29,11 +68,19 @@ section.hero{
     }
 
     h2{
-      position:absolute;
-      bottom:0;
-      left:0;
-      right:0;
+      position:relative;
+      z-index: 1;
+      margin-bottom: 30px;
+      
       text-align:center;
+      padding:0 30px;
+      max-width:15em;
+
+      @media (min-width: @screen-lg-min) {
+        font-size:35px;
+        margin-bottom: 80px;
+      }   
+
     }
   }
 }
