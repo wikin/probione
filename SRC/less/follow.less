@@ -1,0 +1,54 @@
+section.follow{
+	background: #f1f1f1;
+	color: #656565;
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	h3{
+		font-weight: 400;
+		font-size:21px;
+		flex-basis: 100%;
+		text-align:center;
+		margin: 0 0 20px 0;
+
+		@media (min-width: @screen-sm-min) {
+			margin:0;
+			flex-basis: inherit;
+			position:absolute;
+			margin-left: -11em;
+		}
+	}
+
+	a{
+		margin: 0 20px;
+		color:white;
+		text-decoration:none;
+
+		.fa{
+			display:block;
+			font-size:24px;
+			width: 46px;
+			height:46px;
+			border-radius:23px;
+			line-height:46px;
+			text-align: center;
+		}
+
+		.fa-facebook{
+			background: #446dc2; 
+		}
+
+		.fa-twitter{
+			background: #78aef3;
+		}
+
+		.fa-youtube-play{
+			background: #d91600;
+		}
+		
+	}
+
+}
