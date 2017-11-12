@@ -44,7 +44,7 @@ gulp.task('less', function () {
     var appCss = gulp.src('./less/style.less')
                 .pipe(less())
                 .on('error', swallowError)
-                .pipe(replace(/url\((')?\.\.\/bower_modules\/font\-awesome\/fonts\//g, 'url($1../../fonts/'))
+                .pipe(replace(/url\((')?\.\.\/bower_modules\/font\-awesome\/fonts\//g, 'url($1../fonts/'))
                 .pipe(autoprefixer('last 10 versions', 'ie 9'))
                 .pipe(minifyCSS()),
         combinedStream = cs.create(),
