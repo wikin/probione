@@ -25,7 +25,8 @@ gulp.task('js', function () {
     combinedStream.append(  gulp.src('./bower_modules/jquery/dist/jquery.js') );
     combinedStream.append(  gulp.src('./bower_modules/bootstrap/dist/js/bootstrap.min.js') );
     combinedStream.append(  gulp.src('./bower_modules/flexslider/jquery.flexslider.js') );
-    combinedStream.append(  gulp.src('./bower_modules/waypoints/libs/jquery.waypoints.js') );
+    combinedStream.append(  gulp.src('./bower_modules/waypoints/lib/jquery.waypoints.js') );
+    combinedStream.append(  gulp.src('./bower_modules/waypoints/lib/shortcuts/inview.js') );
     combinedStream.append(  gulp.src('./js/script.js') );
 
     var combinedJS = combinedStream.pipe(concat('Scripts/script.js'));

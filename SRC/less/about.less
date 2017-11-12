@@ -29,42 +29,33 @@ section.about{
     .cover{
       position:absolute;
       transition: all 0.5s;
-      backface-visibility: hidden;
+      transition:transform 2s;
     }
     .cover{
+      transform-origin: top;
+      top: 0;
+      transform: rotateX(0deg);
+      animation: cover 5s ease-in-out;
+      z-index: 1;
+      backface-visibility: hidden;
+    }
+    .cover-back{
       transform: rotateX(-180deg);
       transform-origin: bottom;
       bottom: 100%;
-      animation: cover 5s ease-in-out infinite;
+      animation: cover-back 5s ease-in-out;
+      z-index: 2;
     }
-    .cover-back{
-      transform-origin: top;
-      top: 0;
-      animation: cover-back 5s ease-in-out infinite;
-    }
-  }
 
-  @keyframes cover {
-    0% {
-      transform: rotateX(-180deg);
-    }
-    50% {
-      transform: rotateX(-85deg);
-    }
-    100% {
-      transform: rotateX(-180deg);
-    }
-  }
+    &.open{
+      .cover{
+        transform: rotateX(95deg);
+      }
 
-  @keyframes cover-back {
-    0% {
-      transform: rotateX(0deg);
-    }
-    50% {
-      transform: rotateX(95deg);
-    }
-    100% {
-      transform: rotateX(0deg);
+      .cover-back{
+        transform: rotateX(-85deg);
+      }
+
     }
   }
 

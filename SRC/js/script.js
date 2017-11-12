@@ -14,4 +14,16 @@ $(function() {
       nextText:''
     });
   }
+
+
+  if($('.box').length){
+    var inview = new Waypoint.Inview({
+      element: $('.box')[0],
+      entered: function(direction,event) {
+        console.log(direction,event)
+        $(this.element).addClass('open');
+      }
+    });
+  }
+
 });
