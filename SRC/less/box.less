@@ -1,0 +1,45 @@
+.box{
+  margin:0 auto;
+  position:relative;
+  margin-top:20%;
+  width: 80%;
+  max-width: 628px;
+
+  perspective: 2000px; 
+  transform-style: preserve-3d;
+
+  img{
+    display:block;
+    max-width:100%;
+  }
+
+  .cover-back,
+  .cover{
+    position:absolute;
+    transition:transform 1s;
+  }
+  .cover{
+    transform-origin: top;
+    top: 0;
+    transform: rotateX(0deg);
+    z-index: 2;
+    backface-visibility: hidden;
+  }
+  .cover-back{
+    transform: rotateX(-180deg);
+    transform-origin: bottom;
+    bottom: 100%;
+    z-index: 1;
+  }
+
+  &.open{
+    .cover{
+      transform: rotateX(95deg);
+    }
+
+    .cover-back{
+      transform: rotateX(-85deg);
+    }
+
+  }
+}
