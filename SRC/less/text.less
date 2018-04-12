@@ -1,6 +1,15 @@
 section.text{
   text-align:center;
 
+  &.graybg{
+    background: #f8f8f8;
+  }
+
+  &.imagebg {
+    background: #d0dde3 url("../img/text-bg.jpg") 50% 50% no-repeat; 
+    background-size: cover;
+  }
+
   .container{
     max-width:58em;
   }
@@ -47,5 +56,40 @@ section.text{
         }
       }    
     }
+  }
+
+  .longlist {
+    max-width: 50em;
+    margin: 0 auto;
+    text-align: left;
+    
+    @media (min-width: @grid-float-breakpoint) {
+      font-size: 18px;
+    }
+
+    ul{
+      list-style-type: none;
+      padding-left: 40px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      
+      li { 
+        text-indent: -20px;
+        margin-bottom: 10px;
+        &:before {
+          background-color: @text-color;
+          border-radius: 50%;
+          content: "";
+          display: inline-block;
+          margin-right: 12px;
+          margin-bottom: 2px;
+          height: 4px;
+          width: 4px;
+          vertical-align: 3px
+        }
+      }    
+    }
+
   }
 }
