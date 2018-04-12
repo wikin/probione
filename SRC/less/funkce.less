@@ -1,7 +1,18 @@
 section.funkce{
   text-align:center;
-  background: #f7fcfd;
+
+  &.lightbluebg {
+    background: #f7fcfd;
+  }
  
+  section.text + &:not(.lightbluebg) {
+    padding-top:0;
+    margin-top:-30px;
+    @media (min-width: @screen-md){
+      margin-top:-59px;
+    }    
+  }
+
   .row {
     margin-bottom: 20px;
   }
