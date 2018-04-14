@@ -26,4 +26,16 @@ $(function() {
     });
   }
 
+  $('.map').each(function(i, map){
+
+    if(window.SMap){
+      var coords = $(map).data('coords').split(',');
+      console.log(coords);
+      var center = SMap.Coords.fromWGS84.apply(SMap.Coords,coords);
+      var m = new SMap(map, center, parseInt($(map).data('zoom'),10)||12, SMap.DEF_BASE);
+      m.addMarker(center);     
+      if($(map).data('overview')) m.addOverview();
+    }
+  });
+
 });
