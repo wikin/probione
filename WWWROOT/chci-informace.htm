@@ -84,19 +84,19 @@
           <div class="form-group">
             <h3>Jak Vám máme odpovědět?</h3>
             <label class="radio-inline">
-                <input type="radio" name="contact" value="1" onclick="$('#contact2').hide();$('#contact1').show()" checked> E-mailem
+                <input type="radio" name="contact" value="1" onclick="showFormInput('#email');hideFormInput('#telefon');" checked> E-mailem
               </label>
             <label class="radio-inline">
-              <input type="radio" name="contact" value="2" onclick="$('#contact1').hide();$('#contact2').show()"> Telefonicky
+              <input type="radio" name="contact" value="2" onclick="showFormInput('#telefon');hideFormInput('#email');"> Telefonicky
             </label>
           </div>
 
-          <div class="form-group" id="contact1">
-              <input name="email" type="email" class="form-control" placeholder="* Váš e-mail" required>
+          <div class="form-group">
+              <input name="email" id="email" type="email" class="form-control" placeholder="* Váš e-mail" required>
           </div>
 
-          <div class="form-group" id="contact2" style="display:none">
-              <input name="telefon" type="tel" class="form-control" placeholder="* Váš telefon" required>
+          <div class="form-group" style="display:none">
+              <input name="telefon" id="telefon" type="tel" class="form-control" placeholder="* Váš telefon" disabled required>
           </div>
 
           <div class="form-group">

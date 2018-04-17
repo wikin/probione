@@ -39,3 +39,10 @@ $(function() {
   });
 
 });
+
+function showFormInput(selector){
+  $(selector).prop('disabled',false).parent().show()
+}
+function hideFormInput(selector){
+  $(selector).prop('disabled',true).parent().hide();
+}
