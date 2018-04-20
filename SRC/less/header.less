@@ -1,4 +1,8 @@
 header{
+	@media (min-width:@screen-lg-min) {
+		height: 100px;
+	}
+
 	.navbar{
 
 		margin-bottom:0;
@@ -14,6 +18,15 @@ header{
 		}
 
 		.container-fluid{position:relative;z-index:2}
+
+		@media (min-width:@screen-lg-min) {
+			position:fixed;
+			left:0;
+			top:0;
+			right:0;
+			z-index:20;
+			box-shadow:0 1px 10px rgba(0,0,0,.1);
+		}
 	
 		@media (min-width: @screen-lg-min) {
 			padding: 20px;
