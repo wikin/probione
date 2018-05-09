@@ -1,71 +1,75 @@
 section.reference{
-  text-align:center;
-
-  .nazor{
-
-    max-width: 17em;
-    margin:20px auto;
-    font-size:12px;
-    font-weight: 400;
-
-    img{
-      display:block;
-      width: 170px;
-      height: 170px;
-      margin: 0 auto;
-      border: 1px solid #a5a5a5;
-      border-radius: 85px;
-      line-height: 170px;
-    }
-
-    p{
-      color: #7a7a7a;
-      margin-top: 30px;
-    }
-
-    h3{
-      font-size: 14px;
-      margin-top: 40px;
-    }
+  h1, h2 {
+    text-align:center;
+    margin-bottom: 60px;
   }
 
-  .flex-viewport{
-    .col-sm-4{
-      margin:0;
-      padding:0;
-    }
+  .container{
+    max-width:42em;
+    padding-bottom: 40px; 
+  }  
+
+  .btn-block{
+    max-width: 360px;
+    margin: 0 auto;
   }
 
-  .flex-direction-nav{
-    list-style: none;
-
-
-    .flex-prev,
-    .flex-next {
-      position: absolute;
-      background: url('../img/angle.svg') no-repeat;
-      height:137px;
-      width:57px;
-      top:36px;
-
-      &.flex-disabled{
-        opacity: 0;
+  .nazory {
+    position: relative;
+    
+    hr {
+      margin:40px auto;
+      @media (min-width: @screen-sm){
+        margin:60px auto;
       }
     }
 
-    .flex-prev{
-      left:15px;
-    }
+    .nazor {
+      margin-bottom:40px;
+      @media (min-width: @screen-sm){
+        margin-bottom: 60px;
+      }
 
-    .flex-next{
-      right: 15px;
-      transform: scaleX(-1);   
-    }
-  }
+      .in {
+        padding: 0 15px;
+
+        text-align:left;
+
+        @media (min-width: @screen-sm){
+          font-size: 14px;
+          font-weight: 400;
+          line-height:1.8;
+          padding: 0 40px;
+        }
+
+        .text {
+          @media (min-width: @screen-sm){
+            border-left: 1px solid #ccc;
+            padding: 0 0 0 20px;
   
-  .row{
-    position: relative;
-  }
+            &::before {
+              content:"\201E";
+              float:left;
+              font-size: 100px;
+              line-height:1px;
+              margin:0 0 0 -80px;
+              width:60px;
+              text-align:right;
+              font-family:serif;
+              color:#ccc;
+              font-style: oblique;
+            }
 
+          p {margin:0 0 6px 0;}
+
+          }
+
+        }
+        .autor {
+          font-weight:bold;margin-top:6px;text-align:right;font-style: oblique;color:@brand-primary;
+        }
+      }
+    }
+  }
 
 }
