@@ -1,5 +1,6 @@
 // Node modules
 var merge = require('deeply'),  es = require('event-stream'), cs = require('combined-stream');
+var gutil = require('gulp-util');
 
 // Gulp and plugins
 var gulp = require('gulp'), concat = require('gulp-concat'), 
@@ -30,7 +31,8 @@ gulp.task('js', function () {
 
     var combinedJS = combinedStream.pipe(concat('Scripts/script.js'));
     return combinedJS
-        .pipe(uglify({ preserveComments: 'some' }))
+        .pipe(uglify({ output:{ comments : 'some'} }))
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(gulp.dest('../WWWROOT'));
 });
 
